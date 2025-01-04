@@ -12,4 +12,3 @@ These algos help to identify and solve problems.
 ✅ Tree - DFS/BFS
 ✅ Slow and Fast Pointers - LinkedList
 ✅ Parenthesis Problems - Stack
-✅ DP - Knapsack Problem
