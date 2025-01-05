@@ -5,3 +5,8 @@ Basic Data Structures Questions:
   -Deletion (Start, End, Kth)
   -Merging
   -2D Array(Matrix)
+     ->Identity Matrix: An identity matrix is a special diagonal matrix where all diagonal elements are 1, and all non-diagonal elements are 0.
+     ->Symmetric Matrix: A symmetric matrix is a square matrix that is equal to its transpose.The entries of a symmetric matrix are symmetric with respect
+       to the main diagonal. Note: The transpose of a matrix is found by interchanging its rows into columns or columns into rows.
+     ->Sparse Matrix: A sparse matrix is a matrix in which most of the elements are zero. Sparse matrices are often used in situations where storage space
+       needs to be optimized.
