@@ -24,6 +24,18 @@ class LinkedList:
         
         # Step 3: Set new_node as the head
         self.head=newNode
+        
+#Deletion at beginning        
+    def deleteFront(self):
+        if not self.head:
+            return
+        
+        #preserve head value
+        current=self.head
+        
+        #check if LL doest onlt have 1 node
+        if current.next:
+            self.head=current.next
 
 #Insertion at end        
     def insertEnd(self,value):
@@ -38,6 +50,23 @@ class LinkedList:
             current=current.next
         current.next=newNode
         
+        
+#Deletion at end  
+    def deleteEnd(self):
+        if not self.head:
+            return
+        # If there's only one node
+        if not self.head.next:  
+            self.head = None
+            return 
+        
+        current=self.head
+        while current.next and current.next.next:
+            current=current.next
+        
+        current.next=None
+        
+            
 
 #Insertion at Kth position        
     def insertAtPos(self,value,k):
@@ -62,7 +91,29 @@ class LinkedList:
             print("Position out of bounds")
             return  
         newNode.next=current.next    
-        current.next=newNode               
+        current.next=newNode 
+        
+        
+#Deletion at Kth position        
+    def deleteAtPos(self,k):
+        # Case 1: Delete at head if k == 1
+        if k == 1:
+            self.head = self.head.next
+            return
+        
+        # Traverse to (k-1)-th position
+        current = self.head
+        pos=1
+        while current and pos<k-1:
+            current=current.next
+            pos+=1
+             
+        # Case 2: If current is None, k is out of bounds
+        if not current or not current.next:  
+            print("Position out of bounds")
+            return
+        
+        current.next=current.next.next
 
 #Get head value        
     def getHeadValue(self):
@@ -92,7 +143,13 @@ list.insertEnd(8)
 
 list.insertAtPos(9,3)
 
+
+# list.deleteFront()
+# print("get head value:",list.getHeadValue()) 
+
+# list.deleteEnd()
+list.deleteAtPos(3)
+
 list.printList()
-#Insertion at end    
  
 
