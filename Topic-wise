@@ -27,6 +27,17 @@ Basic Data Structures Questions:
   -Traverse
   -Detect cycle
   -Circular and Doubly
+
+✅Stack:
+  -LIFO
+  -Push, Pop, Peek
+  -Implement using Arrays, LL, Queues.
+
+
+✅Queue:
+  -FIFO
+  -Push, Pop, Peek
+  -Implement using Arrays, LL, Stacks.
   
   
 
