@@ -31,13 +31,13 @@ Basic Data Structures Questions:
 ✅Stack:
   -LIFO
   -Push, Pop, Peek
-  -Implement using Arrays, LL, Queues.
+  -Implement using Arrays, LL, 2 Queues.
 
 
 ✅Queue:
   -FIFO
   -Push, Pop, Peek
-  -Implement using Arrays, LL, Stacks.
+  -Implement using Arrays, LL, 2 Stacks.
   
   
 
