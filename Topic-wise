@@ -25,6 +25,7 @@ Basic Data Structures Questions:
   -Insertion(Start, end, Kth position)
   -Deletion(Start, end, Kth position)
   -Traverse
+  -Reverse
   -Detect cycle
   -Circular and Doubly
 
