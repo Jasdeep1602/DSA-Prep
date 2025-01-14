@@ -34,3 +34,42 @@ s.push(12)
 s.push(13)
 s.pop()
 s.peek()
+
+
+
+#implement stack using Linked List
+
+class Node:
+    """A node in the linked list."""
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # Pointer to the next node
+
+
+class Stack:
+    """Stack implementation using a linked list."""
+    def __init__(self):
+        self.top = None  # Pointer to the top of the stack
+        self.size = 0    # Track the size of the stack
+
+    def push(self, item):
+        """Add an item to the top of the stack."""
+        new_node = Node(item)
+        new_node.next = self.top  # Link the new node to the current top
+        self.top = new_node       # Update the top to the new node
+        self.size += 1
+
+    def pop(self):
+        """Remove and return the top item from the stack."""
+        if self.top == None:
+            raise IndexError("Pop from an empty stack")
+        data = self.top.data
+        self.top = self.top.next  # Move the top pointer to the next node
+        self.size -= 1
+        return data
+
+    def peek(self):
+        """Return the top item of the stack without removing it."""
+        if self.top == None:
+            raise IndexError("Peek from an empty stack")
+        return self.top.data
