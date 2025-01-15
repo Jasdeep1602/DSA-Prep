@@ -73,3 +73,42 @@ class Stack:
         if self.top == None:
             raise IndexError("Peek from an empty stack")
         return self.top.data
+
+
+
+
+#implement stack using 2 Queues
+
+
+class StackUsingQueues:
+    def __init__(self):
+        # Initialize two queues as empty lists
+        self.queue1 = []  # Primary queue
+        self.queue2 = []  # Temporary queue for operations
+
+    def push(self, item):
+        # Add the new item to queue2
+        self.queue2.append(item)
+
+        # Move all elements from queue1 to queue2 to maintain stack order
+        while self.queue1:
+            self.queue2.append(self.queue1.pop(0))  # Dequeue from queue1 and enqueue to queue2
+
+        # Swap queue1 and queue2
+        self.queue1, self.queue2 = self.queue2, self.queue1
+
+    def pop(self):
+        # Remove and return the top item (front of queue1)
+        if not self.queue1:
+            return None  # If stack is empty
+        return self.queue1.pop(0)
+
+    def top(self):
+        # Return the top item without removing it
+        if not self.queue1:
+            return None  # If stack is empty
+        return self.queue1[0]
+
+    def is_empty(self):
+        # Check if the stack is empty
+        return len(self.queue1) == 0
