@@ -14,3 +14,26 @@ These algos help to identify and solve problems.
 ✅ Parenthesis Problems - Stack
 ✅ DP - Knapsack Problem
 
+
+1.Greedy Problems
+
+Easy:
+"Best Time to Buy and Sell Stock" (LC #121)
+"Meeting Rooms" (LC #252)
+
+Medium:
+"Jump Game" (LC #55) 
+"Task Scheduler" (LC #621)
+"Non-overlapping Intervals" (LC #435) 
+
+Hard:
+"Meeting Rooms III" (LC #2402) 
+"Minimum Number of Taps to Open to Water a Garden" (LC #1326) 
+"Maximum Performance of a Team" (LC #1383) 
+
+Key patterns to recognize for greedy problems:
+
+Interval scheduling (sort by start/end time)
+Maximum/minimum path problems
+Optimization with local choices
+Problems involving sorting first
