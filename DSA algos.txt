@@ -15,7 +15,7 @@ These algos help to identify and solve problems.
 ✅ DP - Knapsack Problem
 
 
-1.Greedy Problems
+1.Greedy✅:
 
 Easy:
 "Best Time to Buy and Sell Stock" (LC #121)
@@ -37,3 +37,23 @@ Interval scheduling (sort by start/end time)
 Maximum/minimum path problems
 Optimization with local choices
 Problems involving sorting first
+
+2.Sliding Window✅:
+
+Easy:
+"Contains Duplicate II" (LC #219)
+
+Medium:
+"Longest Substring Without Repeating Characters" (LC #3)
+"Minimum Size Subarray Sum" (LC #209)
+"Longest Repeating Character Replacement" (LC #424)
+
+Hard:
+"Minimum Window Substring" (LC #76) 
+
+Key patterns to recognize:
+
+Fixed-size window: Window size remains constant (like k elements)
+Dynamic-size window: Window size varies based on conditions
+Two pointers: Usually 'start' and 'end' to manage the window
+Hash map/Counter: Often used to track frequencies within window
