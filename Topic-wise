@@ -39,6 +39,29 @@ Basic Data Structures Questions:
   -FIFO
   -Push, Pop, Peek
   -Implement using Arrays, LL, 2 Stacks.
+
+
+✅Trees:
+  -Tree types
+  -DFS: Uses Stack 
+      In recursion:
+      -Preorder  :Node->Left->Right
+      -Inorder   :Left->Node->Right
+      -Postorder :Left->Right->Node
+      
+  -BFS: Uses Queue
+      -Levelorder
+
+
+✅Graphs:
+
+
+
+
+
+
+
+
   
   
 
