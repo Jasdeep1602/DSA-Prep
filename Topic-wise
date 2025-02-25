@@ -56,6 +56,8 @@ Basic Data Structures Questions:
 ✅Graphs:
   -Directed
   -Undirected
+  -Trees are acyclic graph
+  -Edgelist, Adjacency Matrix, Adjacency List
 
 
 
