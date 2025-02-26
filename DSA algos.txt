@@ -1,6 +1,6 @@
 These algos help to identify and solve problems.
 
-✅ Sliding Window and Two Pointer
+✅ Sliding Window(stretch) and Two Pointer(squeeze)
 ✅ Greedy (Mostly Sorting)
 ✅ Binary Search on Answer
 ✅ All Combinations/Permutations/Ways
