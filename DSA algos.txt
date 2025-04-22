@@ -15,45 +15,105 @@ These algos help to identify and solve problems.
 ✅ DP - Knapsack Problem
 
 
-1.Greedy✅:
+Recognition of the Patterns:
 
-Easy:
-"Best Time to Buy and Sell Stock" (LC #121)
-"Meeting Rooms" (LC #252)
+✅ Two Pointers
 
-Medium:
-"Jump Game" (LC #55) 
-"Task Scheduler" (LC #621)
-"Non-overlapping Intervals" (LC #435) 
+Problems involving sorted arrays or linked lists
+Finding pairs that satisfy certain conditions
+When you need to compare elements from opposite ends
+Keywords: "find two numbers that sum to X," "remove duplicates"
 
-Hard:
-"Meeting Rooms III" (LC #2402) 
-"Minimum Number of Taps to Open to Water a Garden" (LC #1326) 
-"Maximum Performance of a Team" (LC #1383) 
+✅ Sliding Window
 
-Key patterns to recognize for greedy problems:
+Problems involving contiguous sequences
+Finding subarrays that meet certain criteria
+Keywords: "maximum/minimum subarray," "longest substring with," "find all anagrams"
+When the problem involves a fixed-size window or variable-size window with constraints
 
-Interval scheduling (sort by start/end time)
-Maximum/minimum path problems
-Optimization with local choices
-Problems involving sorting first
+✅ Binary Search
 
-2.Sliding Window✅:
+Sorted arrays
+Search problems with O(log n) time complexity requirement
+"Find the first/last occurrence of"
+"Find the element closest to"
 
-Easy:
-"Contains Duplicate II" (LC #219)
+✅ Breadth-First Search (BFS)
 
-Medium:
-"Longest Substring Without Repeating Characters" (LC #3)
-"Minimum Size Subarray Sum" (LC #209)
-"Longest Repeating Character Replacement" (LC #424)
+Graph or tree traversal
+Finding shortest path
+Level-by-level processing
+"Minimum steps to reach"
+Social network connections
 
-Hard:
-"Minimum Window Substring" (LC #76) 
+✅ Depth-First Search (DFS)
 
-Key patterns to recognize:
+Graph or tree exploration
+Path finding problems
+Backtracking scenarios
+"All possible combinations/permutations"
+Maze solving
 
-Fixed-size window: Window size remains constant (like k elements)
-Dynamic-size window: Window size varies based on conditions
-Two pointers: Usually 'start' and 'end' to manage the window
-Hash map/Counter: Often used to track frequencies within window
+✅ Dynamic Programming
+
+Optimization problems (maximize/minimize)
+Problems with overlapping subproblems
+When you need to find all ways to do something
+Keywords: "maximum profit," "minimum cost," "number of ways," "can you partition"
+
+✅ Backtracking
+
+Problems asking for all possible solutions
+Constraint satisfaction problems
+Combinatorial problems
+Keywords: "all possible," "generate all," "combinations," "permutations"
+
+✅ Heap/Priority Queue
+
+Finding kth largest/smallest element
+Stream processing
+Merging k sorted arrays/lists
+Keywords: "top k," "merge k," "minimum cost to connect"
+
+✅ Hash Table
+
+Frequency counting
+Finding duplicates
+Two-sum-like problems
+Keywords: "find all duplicates," "contains duplicate"
+
+✅ Stack
+
+Parentheses validation problems
+Expression evaluation
+Algorithms requiring LIFO (Last-In-First-Out)
+Problems involving "nearest greater/smaller element"
+Histogram area problems
+
+✅ Graph Algorithms
+
+Problems involving connections, networks, dependencies
+Path finding
+Cycle detection
+Topological sorting
+Keywords: "course schedule," "network," "dependencies"
+
+✅ Trie Data Structure
+
+Problems involving prefixes in strings
+Word dictionary implementation
+Auto-complete features
+Keywords: "prefix," "word search," "dictionary"
+
+✅ Union Find (Disjoint Set)
+
+Network connectivity problems
+Finding connected components
+Cycle detection in undirected graphs
+Keywords: "redundant connection," "number of islands II"
+
+✅ Bit Manipulation
+
+Problems involving binary operations
+Optimizing space complexity
+Keywords: "single number," "number of bits," "power of two"
