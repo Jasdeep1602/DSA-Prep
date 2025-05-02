@@ -1,3 +1,5 @@
+from collections import deque
+
 class TreeNode:
     def __init__(self, val,left=None,right=None):
         self.val = val
@@ -52,11 +54,11 @@ class TreeNode:
         if not node:
             return
         
-        queue=[]
+        queue=deque()
         queue.append(node)
         
         while queue:
-            node=queue.pop(0)
+            node=queue.popleft(0)
             print(node)
             if node.left:
                 queue.append(node.left)
