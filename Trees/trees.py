@@ -58,8 +58,8 @@ class TreeNode:
         queue.append(node)
         
         while queue:
-            node=queue.popleft(0)
-            print(node)
+            node=queue.popleft()
+            print(node.val)
             if node.left:
                 queue.append(node.left)
             if node.right:
