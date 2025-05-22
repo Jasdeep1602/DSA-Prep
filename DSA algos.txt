@@ -2,6 +2,7 @@ These algos help to identify and solve problems.
 
 ✅ Sliding Window(stretch) and Two Pointer(squeeze)
 ✅ Greedy (Mostly Sorting)
+✅ Kadane Algo (Mostly Subarray problem)
 ✅ Binary Search on Answer
 ✅ All Combinations/Permutations/Ways
 ✅ K Smallest / K Largest → Heaps
