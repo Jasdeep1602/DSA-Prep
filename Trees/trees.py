@@ -64,6 +64,37 @@ class TreeNode:
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
+
+    # Zigzag Level Order Traversal
+    # get the level of the tree and array of each level            
+                
+    def zigzagLevelOrder(self, node):
+        if not node:
+            return []
+            
+        queue=deque([node])
+        arr=[]
+        level=0
+
+        while queue:
+            length=len(queue)
+            inner=[]
+            for _ in range(length):
+                node=queue.popleft()
+                inner.append(node.val)
+
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            
+            level+=1
+        
+            if level%2==0:
+                inner.reverse()        
+                    
+            arr.append(inner)
+        print(arr,level)
                 
 
 A=TreeNode(1)
