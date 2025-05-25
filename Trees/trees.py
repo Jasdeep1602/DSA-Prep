@@ -64,7 +64,17 @@ class TreeNode:
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
+                
 
+    def maxHeight(self,node):
+        if not node:
+            return 0
+
+        left=self.maxHeight(node.left) 
+        right=self.maxHeight(node.right)
+
+        return 1 + max(left, right)
+            
     # Zigzag Level Order Traversal
     # get the level of the tree and array of each level            
                 
