@@ -105,6 +105,37 @@ class TreeNode:
                     
             arr.append(inner)
         print(arr,level)
+
+    def maxWidth(self,node):
+        if not node:
+            return 0
+
+        maxWidth = 0
+        # Queue of elements: (node, index)
+        queue = deque([(node, 0)])
+
+        while queue:
+            levelSize = len(queue)
+            # if null values are not counted 
+            # maxWidth=max(maxWidth,levelSize)
+            # no index needed normal append nodes with queue=deque([node])
+            _, firstIndex = queue[0]  # index of first node in the level
+            for _ in range(levelSize):
+                node, index = queue.popleft()
+                # Normalize the index to prevent overflow
+                NormIndex= index-firstIndex
+                if node.left:
+                    queue.append((node.left, 2 * NormIndex))
+                if node.right:
+                    queue.append((node.right, 2 * NormIndex + 1))
+            # Last index in the current level: queue[-1][1] after loop
+            maxWidth = max(
+                maxWidth,
+                queue[-1][1] - queue[0][1] + 1 if queue else 1
+            )
+            
+        print(maxWidth)
+
                 
 
 A=TreeNode(1)
