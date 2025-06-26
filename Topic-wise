@@ -61,6 +61,13 @@ Basic Data Structures Questions:
   -Edgelist, Adjacency Matrix, Adjacency List
 
 
+✅DP:
+  -Memoization = Solve the big problem → break into small parts → store results
+  -Tabulation = Start small → build up a table of solutions
+  -Space Optimized DP = Like tabulation, but reduce memory use to only what’s needed
+
+
+
 
 
 
