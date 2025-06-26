@@ -1,7 +1,7 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
 
-# dp bottom up constant space
+        # dp bottom up constant space
         if n == 1:
             return 1
 
@@ -16,46 +16,51 @@ class Solution:
 
         return cur
 
- # dp bottom up tabulation
-    # if n == 1:
-    #     return 1
+    # dp bottom up tabulation
+    
+    def climbStairsTabulation(self, n: int) -> int:
+        if n == 1:
+            return 1
 
-    # if n == 2:
-    #     return 2
+        if n == 2:
+            return 2
 
-    # dp=[0] * n
-    # dp[0]=1
-    # dp[1]=2
+        dp=[0] * n
+        dp[0]=1
+        dp[1]=2
 
-    # for i in range(2,n):
-    #     dp[i]=dp[i-2] + dp[i-1]
+        for i in range(2,n):
+            dp[i]=dp[i-2] + dp[i-1]
 
-    # return dp[n-1]
+        return dp[n-1]  
 
-# dp momoization
+    # dp momoization
+    def climbStairsMemoization(self, n: int) -> int:
+    
+        memo = {1: 1, 2: 2}
 
-    # memo = {1: 1, 2: 2}
+        def f(n):
+            if n in memo:
+                return memo[n]
 
-    # def f(n):
-    #     if n in memo:
-    #         return memo[n]
+            else:
+                memo[n] = f(n - 2) + f(n - 1)
 
-    #     else:
-    #         memo[n] = f(n - 2) + f(n - 1)
+                return memo[n]
 
-    #         return memo[n]
+        return f(n)
 
-    # return f(n)
+    # normal recursion
+    def climbStairsRecursion(self, n: int) -> int:
+        # base case
 
- # normal recursion
+        if n == 1:
+            return 1
 
-    # if n == 1:
-    #     return 1
+        if n == 2:
+            return 2
 
-    # if n == 2:
-    #     return 2
-
-    # return self.climbStairs(n - 1) + self.climbStairs(n - 2)
+        return self.climbStairs(n - 1) + self.climbStairs(n - 2)
 
 sol= Solution()
 print(sol.climbStairs(5))  # Output: 8
