@@ -1,7 +1,7 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
 
-        # dp bottom up constant space
+# dp bottom up constant space
         if n == 1:
             return 1
 
@@ -16,7 +16,7 @@ class Solution:
 
         return cur
 
-    # dp bottom up tabulation
+ # dp bottom up tabulation
     # if n == 1:
     #     return 1
 
@@ -32,7 +32,7 @@ class Solution:
 
     # return dp[n-1]
 
-    # dp momoization
+# dp momoization
 
     # memo = {1: 1, 2: 2}
 
@@ -47,7 +47,7 @@ class Solution:
 
     # return f(n)
 
-    # normal recursion
+ # normal recursion
 
     # if n == 1:
     #     return 1
