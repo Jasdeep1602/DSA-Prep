@@ -1,0 +1,38 @@
+✅ Time Complexity
+➤ What it is:
+•Measures how execution time grows relative to input size n.
+
+➤ Key Points:
+•Uses Big O notation to express upper bounds (worst-case, typically).
+
+•Analyzes how loops, recursion, and operations scale.
+
+•Ignores machine-dependent constants; focuses on growth rate.
+
+✅ Space Complexity
+➤ What it is:
+•Measures how much memory the algorithm uses as input size n grows.
+
+➤ Components:
+1. Input Space:
+•Memory used to hold the input.
+
+•Not counted in auxiliary space.
+
+•Always at least O(n) if input size is n.
+
+2. Auxiliary Space:
+•Extra space the algorithm needs on top of input.
+
+Includes:
+
+•Temporary variables
+
+•Data structures (arrays, hashmaps, etc.)
+
+•Recursion call stack
+
+3. Total Space Complexity:
+•Input Space + Auxiliary Space
+
+•Represents the complete memory footprint of the algorithm.
