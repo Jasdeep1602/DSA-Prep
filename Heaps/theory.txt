@@ -1,55 +1,89 @@
 A heap is a special tree-based data structure used to implement priority queues. It comes in two main types:
 
 🔺 Min Heap
-The smallest element is always at the top (root).
-
-Every parent node is less than or equal to its children.
+-The smallest element is always at the top (root).
+-Every parent node is less than or equal to its children.
 
 🔻 Max Heap
-The largest element is always at the top.
-
-Every parent node is greater than or equal to its children.
+-The largest element is always at the top.
+-Every parent node is greater than or equal to its children.
 
 🧠 Key Properties
-It is a complete binary tree → All levels are filled left to right.
-
-Implemented most commonly as an array, not a real tree.
+-It is a complete binary tree → All levels are filled left to right.
+-Implemented most commonly as an array, not a real tree.
 
 📦 Array Representation Example
-Given a heap:
 
-markdown
-Copy
-Edit
        10
      /    \
    15      20
   /  \
  30  40
+
 Stored as:
-
-csharp
-Copy
-Edit
 [10, 15, 20, 30, 40]
-Left child of index i → 2i + 1
 
-Right child of index i → 2i + 2
-
-Parent of index i → Math.floor((i - 1) / 2)
+-Left child of index i → 2i + 1
+-Right child of index i → 2i + 2
+-Parent of index i → Math.floor((i - 1) / 2)
 
 🛠 Common Operations
-Operation	Time Complexity	Description
-insert()	O(log n)	Add a new element and bubble it up
-peek()	O(1)	Get the top element
-remove() or extract()	O(log n)	Remove top, move last to root, bubble down
+insert()	O(log n)	
+peek()	       O(1)	
+remove()      O(log n)
 
 🧰 Use Cases
-Priority queues (e.g., task scheduling)
+-Priority queues (e.g., task scheduling)
+-Dijkstra’s shortest path algorithm
+-Heap sort
+-Median-finding with two heaps
 
-Dijkstra’s shortest path algorithm
 
-Heap sort
+📦 EXAMPLE
 
-Median-finding with two heaps
+➡️Starting Array: [10, 15, 20, 17, 8, 25]
+First, let's build this into a min heap. The array becomes:
+[8, 10, 20, 17, 15, 25]
+This represents the tree structure:
+       8
+     /   \
+   10     20
+  /  \   /
+ 17  15 25
+
+➡️Step 1: Pop the Top Element
+-Pop: Remove 8 (the minimum)
+-Replace: Move the last element (25) to the root
+-Current state: [25, 10, 20, 17, 15]
+
+➡️Step 2: Heapify Down (Restore Heap Property)
+-Since 25 > 10, we need to fix this:
+-Compare 25 with children (10, 20): 10 is smaller, so swap
+-Result: [10, 25, 20, 17, 15]
+-Compare 25 with new children (17, 15): 15 is smaller, so swap
+-Result: [10, 15, 20, 17, 25]
+
+Now we have a valid min heap again.
+➡️Step 3: Modify the Popped Element
+-Popped value: 8
+-Add something: Let's say we add 5
+-New value: 8 + 5 = 13
+
+➡️Step 4: Insert the Modified Value Back
+-Insert 13 at the end: [10, 15, 20, 17, 25, 13]
+
+➡️Step 5: Heapify Up (Restore Heap Property)
+-Since 13 < 20 (its parent), we need to bubble up:
+-Compare 13 with parent 20: Swap them
+-Result: [10, 15, 13, 17, 25, 20]
+-Compare 13 with new parent 10: 13 > 10, so we stop
+-Final Result
+-Final heap: [10, 15, 13, 17, 25, 20]
+
+The tree now looks like:
+       10
+     /    \
+   15      13
+  /  \    /
+ 17  25  20
 
