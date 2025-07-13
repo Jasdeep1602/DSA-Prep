@@ -1,0 +1,55 @@
+A heap is a special tree-based data structure used to implement priority queues. It comes in two main types:
+
+🔺 Min Heap
+The smallest element is always at the top (root).
+
+Every parent node is less than or equal to its children.
+
+🔻 Max Heap
+The largest element is always at the top.
+
+Every parent node is greater than or equal to its children.
+
+🧠 Key Properties
+It is a complete binary tree → All levels are filled left to right.
+
+Implemented most commonly as an array, not a real tree.
+
+📦 Array Representation Example
+Given a heap:
+
+markdown
+Copy
+Edit
+       10
+     /    \
+   15      20
+  /  \
+ 30  40
+Stored as:
+
+csharp
+Copy
+Edit
+[10, 15, 20, 30, 40]
+Left child of index i → 2i + 1
+
+Right child of index i → 2i + 2
+
+Parent of index i → Math.floor((i - 1) / 2)
+
+🛠 Common Operations
+Operation	Time Complexity	Description
+insert()	O(log n)	Add a new element and bubble it up
+peek()	O(1)	Get the top element
+remove() or extract()	O(log n)	Remove top, move last to root, bubble down
+
+🧰 Use Cases
+Priority queues (e.g., task scheduling)
+
+Dijkstra’s shortest path algorithm
+
+Heap sort
+
+Median-finding with two heaps
+
