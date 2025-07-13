@@ -1,0 +1,16 @@
+🏷️ Each element has a priority, and
+🚦 Elements with higher priority are dequeued before lower ones — regardless of insertion order.
+
+📦 Difference from a Regular Queue:
+-Regular Queue                   	Priority Queue
+-First-In-First-Out (FIFO)	      Highest-priority-out (not FIFO)
+-Order matters	                  Priority matters
+
+🔧 How It Works Internally
+A heap (usually a min heap or max heap) is the most efficient data structure to implement a priority queue.
+
+Operation	Time Complexity
+insert()	O(log n)
+pop()	    O(log n)
+peek()	  O(1)
+
